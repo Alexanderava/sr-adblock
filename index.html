@@ -137,7 +137,8 @@
       <div class="stat"><b>51</b><i>个解密域名</i></div>
     </div>
 
-    <a class="install" id="install" href="#">一键安装到 Shadowrocket</a>
+    <a class="install" id="install"
+       href="shadowrocket://install?module=https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock.sgmodule">一键安装到 Shadowrocket</a>
     <p class="hint">需要已安装 Shadowrocket，点击后自动跳转导入</p>
 
     <div class="row">
@@ -172,7 +173,6 @@
 <script>
   var RAW = "https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock.sgmodule";
   document.getElementById("install").href = "shadowrocket://install?module=" + RAW;
-
   var btn = document.getElementById("copy");
   btn.addEventListener("click", function (e) {
     e.preventDefault();
