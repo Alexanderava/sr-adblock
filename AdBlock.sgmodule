@@ -1,6 +1,6 @@
 #!name=去广告合集 · All-in-One
-#!desc=合并 LOWERTOP/Shadowrocket-First 及社区共 20 个去广告模块（不含哔哩哔哩）。生成于 2026-11-18 06:41
-#!author=LOWERTOP、向晚、奶思 / fmz200、iab0x00、app2smile、xream / QingRex、iab0x00 / Maasea、Reukix
+#!desc=合并 LOWERTOP/Shadowrocket-First 及社区共 21 个去广告模块（不含哔哩哔哩）。生成于 2026-11-18 06:56
+#!author=LOWERTOP、向晚、iab0x00、奶思 / fmz200、app2smile、xream / QingRex、iab0x00 / Maasea、Reukix
 #!homepage=https://github.com/LOWERTOP/Shadowrocket-First
 #!arguments=开屏广告:true,弹窗广告:true,瀑布广告:true,追踪埋点:REJECT,携程网关:DIRECT,屏蔽弹窗:true,屏蔽推广:true,统计策略:REJECT,功能解锁:false,活跃时间:false,允许下载:false,隐身配额:false,更新弹窗:false,地图次数:false,per_filter_video:0,NSFW:"Nsfw",TRANSLATION:"http-request",TRANSLATION_VALUE:"enabled, seo, zh-hans",屏蔽上传按钮:true,屏蔽选段按钮:true,屏蔽Shorts按钮:false,启用调试模式:false,字幕翻译语言:off,歌词补全:"true",歌词翻译:"true",翻译语言:"zh-CN",百度翻译:"false",翻译账户:"自行申请并填写",翻译密钥:"自行申请并填写",节点检测:PROXY,代理分流:PROXY
 #!arguments-desc=【🅲🆃🆁🅸🅿🅰🅳】开屏广告：去开屏广告（true=开启，false=关闭）\n弹窗广告：去首页弹窗广告（true=开启，false=关闭）\n瀑布广告：去信息流/Banner 广告（true=开启，false=关闭）\n追踪埋点：广告埋点 ma-adx.ctrip.com（REJECT=拦截，DIRECT=放行）\n携程网关：携程 TCP 网关（REJECT=强制回退 HTTPS，DIRECT=放行；去广告不生效时改为 REJECT）\n【🆃🅴🅻🅳🅰🅿🅿】🔘 屏蔽弹窗: 清空 App 广告位接口 (CMS-GetAppAd) \n🔘 屏蔽推广: 清空商城轮播、PLUS 促销、券包售卖与福利群二维码，默认开启但可能误伤券包购买入口 \n🔘 统计策略: 友盟、Bugly、字节埋点等统计上报，默认 REJECT，填 DIRECT 可放行\n【🆀🅸🅽🅶🅰🅿🅿】🔘 功能解锁: 显示真实视界、提高资料可见度与长视频限制 \n🔘 活跃时间: 显示附近的人的隐身活跃状态 \n🔘 允许下载: 解锁动态图片与视频下载权限 \n🔘 隐身配额: 隐身消息发送配额修改为 999 \n🔘 更新弹窗: 屏蔽版本更新提示弹窗 \n🔘 地图次数: 实验性测试提高每日地图位置切换次数，该功能仅本地实现，可能不可过度突破服务器限制\n【贴吧去广告】per_filter_video:设置为1则推荐页不展示视频贴\n【Reddit 去广告】\n1️⃣ NSFW\n\n填写 Nsfw 时, 表示关闭 NSFW 提示, 其他值表示恢复默认行为\n\n2️⃣ TRANSLATION\n\n填写 http-request 时, 表示开启自动翻译, # 表示关闭自动翻译.\n⚠️ 由于无法区分首次原始请求和手动点击翻译的请求, 开启之后 App 内切换功能就无效了...\n\n3️⃣ TRANSLATION_VALUE\n\n如果 Reddit 改了行为, 可以自己改这个值\n【YouTubeNoAds】\n▶ 参数说明:\n\n - 屏蔽按钮: 默认开启，可手动切换\n\n - 调试模式: 默认关闭，非调试无需切换\n\n - 翻译语言: 默认关闭，可自定义语言代码\n\n\n▶ 语言代码：\n\n - 翻译语言可根据需求自定义，语言代码遵循Google Translate Languages Codes，示例如下↓\n\n - 简中: zh-Hans，日语: ja，韩语: ko，西语: es，法语: fr\n【🆂🅿🅾🆃🅸🅵🆈】\n\n模块说明：请停用其他 Spotify 歌词模块，避免重复处理同一接口。若歌词存在官方歌词则优先选用；外部歌词按歌名、歌手和时长匹配；默认使用网易、谷歌等翻译，支持选填百度翻译APPID，启用后若不存在网易人工翻译，则首选百度翻译，可一定程度上避免翻译受限。 \n\n脚本来源：Reukix \n\n歌词补全：启用歌词补全 \n\n歌词翻译：启用歌词翻译 \n\n翻译语言：翻译目标语言，默认 zh-CN \n\n百度翻译：启用百度翻译 \n\n翻译账户：百度翻译开放平台的 APP ID \n\n翻译密钥：百度翻译开放平台的密钥\n【🆃🅾🅿🅼🅾🅳🆂】分流代理策略\n\n· 支持填入节点名称或代理分组名称指定分流\n\n· 默认值是首页节点\n\n· 本模块包含去广告规则，可去除部分第三方广告，仅适用于登陆后使用，不适用于软件注册。Talkatone 针对使用者 IP 的审查趋于严格，单纯的分流的做法可能在部分节点或网络环境下不再有效，建议分别测试有效节点
@@ -8,7 +8,7 @@
 #====================================================================
 # 去广告合集（All-in-One）
 #
-# 整合内容：🅲🅻🅴🅰🅽🅴🆁、🅷🅾🅽🅶🅶🆄🅾、🅲🆃🆁🅸🅿🅰🅳、🆁🆄🅸🆇🅸🅽🅶、🆃🅴🅻🅳🅰🅿🅿、🆀🅸🅽🅶🅰🅿🅿、🅲🅰🅳🆅🅸🅴🆆、高德地图、彩云天气、一汽大众、小红书、微博去广告&净化、WeiboIntl、贴吧去广告、Reddit 去广告、SDGun 社区去广告、YouTubeNoAds、X 网页版去广告、🆂🅿🅾🆃🅸🅵🆈、🆃🅾🅿🅼🅾🅳🆂
+# 整合内容：🅲🅻🅴🅰🅽🅴🆁、🅷🅾🅽🅶🅶🆄🅾、🅲🆃🆁🅸🅿🅰🅳、🆁🆄🅸🆇🅸🅽🅶、🆃🅴🅻🅳🅰🅿🅿、🆀🅸🅽🅶🅰🅿🅿、🅲🅰🅳🆅🅸🅴🆆、高德地图、彩云天气、一汽大众、DiDiClean、小红书、微博去广告&净化、WeiboIntl、贴吧去广告、Reddit 去广告、SDGun 社区去广告、YouTubeNoAds、X 网页版去广告、🆂🅿🅾🆃🅸🅵🆈、🆃🅾🅿🅼🅾🅳🆂
 # 排除：哔哩哔哩增强、哔哩哔哩国际版（按需求未合并）
 #
 # 使用前提：
@@ -234,6 +234,12 @@ DOMAIN,gather.colorfulclouds.net,REJECT,pre-matching
 
 # ------- 一汽大众 | 一汽大众 -------
 DOMAIN-SUFFIX,faw-vw.com,DIRECT
+
+# ------- DiDiClean | 滴滴出行（开屏 / 首页 / 底栏 / 我的页精简） -------
+DOMAIN,hd.xiaojukeji.com,REJECT
+DOMAIN,gwp.xiaojukeji.com,REJECT
+AND,((IP-ASN,45090,no-resolve),(DST-PORT,25641),(PROTOCOL,TCP)),REJECT
+AND,((IP-ASN,63646,no-resolve),(DST-PORT,25641),(PROTOCOL,TCP)),REJECT
 
 # ------- 小红书 | 小红书（含去水印） -------
 DOMAIN,apm-fe.xiaohongshu.com,REJECT,pre-matching
@@ -643,6 +649,17 @@ IP-CIDR,119.29.29.99/32,REJECT,no-resolve
 ^https?:\/\/oss\.amap\.com\/ws\/banner\/lists\/\? - reject-dict
 ^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? - reject-dict
 
+# ------- DiDiClean | 滴滴出行（开屏 / 首页 / 底栏 / 我的页精简） -------
+^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/getMulti\? - reject-dict
+^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget - reject-dict
+^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds - reject-dict
+^https:\/\/freight\.xiaojukeji\.com\/gateway - reject-dict
+^https:\/\/daijia\.kuaidadi\.com:443\/gateway - reject-dict
+^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget - reject-dict
+^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast - reject-dict
+^https:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf - reject-dict
+^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other\/slow - reject-dict
+
 # ------- 小红书 | 小红书（含去水印） -------
 ^https?:\/\/ci\.xiaohongshu\.com\/system_config\/watermark - reject-img
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/ads\/material\/guide\? - reject-dict
@@ -833,6 +850,13 @@ http-response-jq ^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothLi
 http-response-jq ^https?:\/\/oneapp-api\.faw-vw\.com\/miniprogram\/car\/config\/page\/getList\/v\d+\?.* '. = { returnStatus: "SUCCEED", data: [] }'
 http-response-jq ^https?:\/\/oneapp-api\.faw-vw\.com\/search\/firstPage\/getPromptList\/v\d+\?.* '. = { returnStatus: "SUCCEED", data: [] }'
 
+# ------- DiDiClean | 滴滴出行（开屏 / 首页 / 底栏 / 我的页精简） -------
+http-response-jq ^https:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me '.data.cards |= map(select(.title != "天天领福利" and .title != "金融服务" and .title != "更多服务" and .title != "企业服务" and .title != "安全中心")) | .data.cards[] |= if .tag == "wallet" then .items |= map(select(.title == "优惠券")) | if .card_type == 4 then .bottom_items |= map(select(.title == "省钱套餐" or .title == "出行里程")) else . end else . end'
+http-response-jq ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core '.data.order_cards.nav_list_card.data |= map(select(.nav_id == "dache_anycar" or .nav_id == "driverservice" or .nav_id == "bike" or .nav_id == "carmate")) | .data.disorder_cards.bottom_nav_list.data |= map(select(.id == "v6x_home" or .id == "home_page" or .id == "user_center"))'
+http-response-jq ^https:\/\/api\.udache\.com\/gulfstream\/pre-sale\/v1\/other\/pGetSceneList '.data.scene_list |= map(select(.text != "优惠商城")) | .data.show_data[] |= (if .scene_ids then .scene_ids |= map(select(. != "scene_coupon_mall")) else . end)'
+http-response-jq ^https:\/\/conf\.diditaxi\.com\.cn\/ota\/na\/yuantu\/infoList '.data.disorder_cards.top_banner_card.data |= if .[0].T == "yuentu_top_banner" then .[1:] else . end'
+http-response-jq ^https:\/\/api\.udache\.com\/gulfstream\/passenger-center\/v2\/other\/pInTripLayout '.data.order_components |= map(select(.name != "passenger_common_casper"))'
+
 # ------- 小红书 | 小红书（含去水印） -------
 http-response-jq ^https?:\/\/(?:edith|rec|www)\.xiaohongshu\.com\/api\/sns\/v\d+\/homefeed\? 'if type=="object" and (.data|type)=="array" then .data |= map(select((.|type)!="object" or ((((.model_type? // "") | tostring) | test("^live")) | not))) else . end'
 http-response-jq ^https?:\/\/(?:edith|rec|www)\.xiaohongshu\.com\/api\/sns\/v\d+\/homefeed\? 'if type=="object" and (.data|type)=="array" then .data |= map(select((.|type)!="object" or ((has("ads_info")|not) and ((.is_ads? // false) != true) and (((.recommend.track_id | type) == "string" and (.recommend.track_id | test("pgy"; "i"))) | not)))) else . end'
@@ -966,4 +990,4 @@ spotify.spotify-lyrics-playback = type=http-response,pattern=^https:\/\/(?:[A-Za
 spotify.spotify-proto = type=http-response,pattern=^https:\/\/(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?\/(?:bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize|nebula\/v1\/configuration\/attributes|remote-config-resolver\/v3\/configuration)\/?(?:\?[^#]*)?$,requires-body=1,binary-body-mode=1,max-size=2097152,script-path=https://raw.githubusercontent.com/LOWERTOP/Shadowrocket-First/main/JS/Spotify.js,script-update-interval=86400,timeout=5
 
 [MITM]
-hostname = %APPEND% static-tw.baozimh.com,*.baozimhcn.com,*.dzmanga.com,*.xiaoyi.com,api.pinterest.com,m.ctrip.com,capi.lkcoffee.com,ecapi.lkcoffee.com,img0*.luckincoffeecdn.com,sgi.teld.cn,sgi.teld.cc,api.qing2000.com,api.qing2000.net,api.qing2000.cc,api.qing2000.cn,223.5.5.5,ai.amap.com,info.amap.com,m5-zb.amap.com,m5.amap.com,oss.amap.com,sns.amap.com,starplucker.cyapi.cn,wrapper.cyapi.cn,oneapp-api.faw-vw.com,ci.xiaohongshu.com,edith.xiaohongshu.com,live-go.xiaohongshu.com,live-mall.xiaohongshu.com,live-room.xiaohongshu.com,rec.xiaohongshu.com,referee.xiaohongshu.com,search.xiaohongshu.com,so.xiaohongshu.com,www.xiaohongshu.com,*.weibo.cn,*.weibo.com,weibo.com,api.weibo.cn,weibointl.api.weibo.cn,tiebac.baidu.com,gql.reddit.com,gql-fed.reddit.com,mag1.sdgun.net,*.googlevideo.com,youtubei.googleapis.com,x.com,spclient.wg.spotify.com,spclient.spotify.com,*spclient.spotify.com,*-spclient.wg.spotify.com
+hostname = %APPEND% static-tw.baozimh.com,*.baozimhcn.com,*.dzmanga.com,*.xiaoyi.com,api.pinterest.com,m.ctrip.com,capi.lkcoffee.com,ecapi.lkcoffee.com,img0*.luckincoffeecdn.com,sgi.teld.cn,sgi.teld.cc,api.qing2000.com,api.qing2000.net,api.qing2000.cc,api.qing2000.cn,223.5.5.5,ai.amap.com,info.amap.com,m5-zb.amap.com,m5.amap.com,oss.amap.com,sns.amap.com,starplucker.cyapi.cn,wrapper.cyapi.cn,oneapp-api.faw-vw.com,common.diditaxi.com.cn,freight.xiaojukeji.com,daijia.kuaidadi.com,162.14.157.*,ct.xiaojukeji.com,res.xiaojukeji.com,conf.diditaxi.com.cn,api.udache.com,123.207.209.*,112.53.55.225,120.241.142.*,120.241.143.*,116.85.*,139.199.240.84,ci.xiaohongshu.com,edith.xiaohongshu.com,live-go.xiaohongshu.com,live-mall.xiaohongshu.com,live-room.xiaohongshu.com,rec.xiaohongshu.com,referee.xiaohongshu.com,search.xiaohongshu.com,so.xiaohongshu.com,www.xiaohongshu.com,*.weibo.cn,*.weibo.com,weibo.com,api.weibo.cn,weibointl.api.weibo.cn,tiebac.baidu.com,gql.reddit.com,gql-fed.reddit.com,mag1.sdgun.net,*.googlevideo.com,youtubei.googleapis.com,x.com,spclient.wg.spotify.com,spclient.spotify.com,*spclient.spotify.com,*-spclient.wg.spotify.com
