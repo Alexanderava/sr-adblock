@@ -1,14 +1,14 @@
 #!name=去广告合集 · All-in-One
-#!desc=合并 LOWERTOP/Shadowrocket-First 及社区共 22 个去广告模块。生成于 2026-11-18 07:06
+#!desc=合并 LOWERTOP/Shadowrocket-First 及社区共 28 个去广告模块。生成于 2026-11-18 07:51
 #!author=LOWERTOP、向晚、iab0x00、奶思 / fmz200、app2smile、xream / QingRex、iab0x00 / Maasea、Reukix、kokoryh
 #!homepage=https://github.com/LOWERTOP/Shadowrocket-First
-#!arguments=开屏广告:true,弹窗广告:true,瀑布广告:true,追踪埋点:REJECT,携程网关:DIRECT,屏蔽弹窗:true,屏蔽推广:true,统计策略:REJECT,功能解锁:false,活跃时间:false,允许下载:false,隐身配额:false,更新弹窗:false,地图次数:false,per_filter_video:0,NSFW:"Nsfw",TRANSLATION:"http-request",TRANSLATION_VALUE:"enabled, seo, zh-hans",屏蔽上传按钮:true,屏蔽选段按钮:true,屏蔽Shorts按钮:false,启用调试模式:false,字幕翻译语言:off,歌词补全:"true",歌词翻译:"true",翻译语言:"zh-CN",百度翻译:"false",翻译账户:"自行申请并填写",翻译密钥:"自行申请并填写",节点检测:PROXY,代理分流:PROXY,动态最常访问:auto,创作中心:0,过滤置顶评论广告:1,优化评论区加载:bilibili.protobuf.request,空降助手:bilibili.airborne,空降助手策略:DIRECT,屏蔽P2P:DEST-PORT,日志等级:4
-#!arguments-desc=【🅲🆃🆁🅸🅿🅰🅳】开屏广告：去开屏广告（true=开启，false=关闭）\n弹窗广告：去首页弹窗广告（true=开启，false=关闭）\n瀑布广告：去信息流/Banner 广告（true=开启，false=关闭）\n追踪埋点：广告埋点 ma-adx.ctrip.com（REJECT=拦截，DIRECT=放行）\n携程网关：携程 TCP 网关（REJECT=强制回退 HTTPS，DIRECT=放行；去广告不生效时改为 REJECT）\n【🆃🅴🅻🅳🅰🅿🅿】🔘 屏蔽弹窗: 清空 App 广告位接口 (CMS-GetAppAd) \n🔘 屏蔽推广: 清空商城轮播、PLUS 促销、券包售卖与福利群二维码，默认开启但可能误伤券包购买入口 \n🔘 统计策略: 友盟、Bugly、字节埋点等统计上报，默认 REJECT，填 DIRECT 可放行\n【🆀🅸🅽🅶🅰🅿🅿】🔘 功能解锁: 显示真实视界、提高资料可见度与长视频限制 \n🔘 活跃时间: 显示附近的人的隐身活跃状态 \n🔘 允许下载: 解锁动态图片与视频下载权限 \n🔘 隐身配额: 隐身消息发送配额修改为 999 \n🔘 更新弹窗: 屏蔽版本更新提示弹窗 \n🔘 地图次数: 实验性测试提高每日地图位置切换次数，该功能仅本地实现，可能不可过度突破服务器限制\n【贴吧去广告】per_filter_video:设置为1则推荐页不展示视频贴\n【Reddit 去广告】\n1️⃣ NSFW\n\n填写 Nsfw 时, 表示关闭 NSFW 提示, 其他值表示恢复默认行为\n\n2️⃣ TRANSLATION\n\n填写 http-request 时, 表示开启自动翻译, # 表示关闭自动翻译.\n⚠️ 由于无法区分首次原始请求和手动点击翻译的请求, 开启之后 App 内切换功能就无效了...\n\n3️⃣ TRANSLATION_VALUE\n\n如果 Reddit 改了行为, 可以自己改这个值\n【YouTubeNoAds】\n▶ 参数说明:\n\n - 屏蔽按钮: 默认开启，可手动切换\n\n - 调试模式: 默认关闭，非调试无需切换\n\n - 翻译语言: 默认关闭，可自定义语言代码\n\n\n▶ 语言代码：\n\n - 翻译语言可根据需求自定义，语言代码遵循Google Translate Languages Codes，示例如下↓\n\n - 简中: zh-Hans，日语: ja，韩语: ko，西语: es，法语: fr\n【🆂🅿🅾🆃🅸🅵🆈】\n\n模块说明：请停用其他 Spotify 歌词模块，避免重复处理同一接口。若歌词存在官方歌词则优先选用；外部歌词按歌名、歌手和时长匹配；默认使用网易、谷歌等翻译，支持选填百度翻译APPID，启用后若不存在网易人工翻译，则首选百度翻译，可一定程度上避免翻译受限。 \n\n脚本来源：Reukix \n\n歌词补全：启用歌词补全 \n\n歌词翻译：启用歌词翻译 \n\n翻译语言：翻译目标语言，默认 zh-CN \n\n百度翻译：启用百度翻译 \n\n翻译账户：百度翻译开放平台的 APP ID \n\n翻译密钥：百度翻译开放平台的密钥\n【🆃🅾🅿🅼🅾🅳🆂】分流代理策略\n\n· 支持填入节点名称或代理分组名称指定分流\n\n· 默认值是首页节点\n\n· 本模块包含去广告规则，可去除部分第三方广告，仅适用于登陆后使用，不适用于软件注册。Talkatone 针对使用者 IP 的审查趋于严格，单纯的分流的做法可能在部分节点或网络环境下不再有效，建议分别测试有效节点\n【哔哩哔哩增强】动态最常访问\n- auto: 仅当列表中存在直播状态时显示\n- show: 始终显示\n- hide: 始终隐藏\n\n创作中心\n- 0: 隐藏\n- 1: 显示\n\n过滤置顶评论广告\n- 0: 关闭\n- 1: 开启\n\n优化评论区加载: 默认开启，配置为"#"时关闭\n\n空降助手: 默认开启，配置为"#"时关闭\n\n空降助手策略: 默认直连，建议配置为代理策略\n\n屏蔽P2P: 默认开启，配置为"#"时关闭\n\n日志等级\n- 1: DEBUG\n- 2: INFO\n- 3: WARN\n- 4: ERROR\n- 5: OFF
+#!arguments=开屏广告:true,弹窗广告:true,瀑布广告:true,追踪埋点:REJECT,携程网关:DIRECT,屏蔽弹窗:true,屏蔽推广:true,统计策略:REJECT,功能解锁:false,活跃时间:false,允许下载:false,隐身配额:false,更新弹窗:false,地图次数:false,per_filter_video:0,NSFW:"Nsfw",TRANSLATION:"http-request",TRANSLATION_VALUE:"enabled, seo, zh-hans",屏蔽上传按钮:true,屏蔽选段按钮:true,屏蔽Shorts按钮:false,启用调试模式:false,字幕翻译语言:off,歌词补全:"true",歌词翻译:"true",翻译语言:"zh-CN",百度翻译:"false",翻译账户:"自行申请并填写",翻译密钥:"自行申请并填写",节点检测:PROXY,代理分流:PROXY,动态最常访问:auto,创作中心:0,过滤置顶评论广告:1,优化评论区加载:bilibili.protobuf.request,空降助手:bilibili.airborne,空降助手策略:DIRECT,屏蔽P2P:DEST-PORT,日志等级:4,翻译条目数量:50,翻译目标语言:zh-CN,默认CDN节点:cdn,默认CDN策略:DIRECT,🔘启用用户1:#http,用户1:填写GitHub用户名,密钥1:填写你的PAT密钥,🔘启用用户2:#http,用户2:填写GitHub用户名,密钥2:填写你的PAT密钥,🔘启用用户3:#http,用户3:填写GitHub用户名,密钥3:填写你的PAT密钥,🔘启用用户4:#http,用户4:填写GitHub用户名,密钥4:填写你的PAT密钥,商店下载加速:iosapps,商店加速地址:iosapps.itunes.apple.com.download.ks-cdn.com,系统升级加速:updates,升级加速地址:updates.cdn-apple.com.download.ks-cdn.com
+#!arguments-desc=【🅲🆃🆁🅸🅿🅰🅳】开屏广告：去开屏广告（true=开启，false=关闭）\n弹窗广告：去首页弹窗广告（true=开启，false=关闭）\n瀑布广告：去信息流/Banner 广告（true=开启，false=关闭）\n追踪埋点：广告埋点 ma-adx.ctrip.com（REJECT=拦截，DIRECT=放行）\n携程网关：携程 TCP 网关（REJECT=强制回退 HTTPS，DIRECT=放行；去广告不生效时改为 REJECT）\n【🆃🅴🅻🅳🅰🅿🅿】🔘 屏蔽弹窗: 清空 App 广告位接口 (CMS-GetAppAd) \n🔘 屏蔽推广: 清空商城轮播、PLUS 促销、券包售卖与福利群二维码，默认开启但可能误伤券包购买入口 \n🔘 统计策略: 友盟、Bugly、字节埋点等统计上报，默认 REJECT，填 DIRECT 可放行\n【🆀🅸🅽🅶🅰🅿🅿】🔘 功能解锁: 显示真实视界、提高资料可见度与长视频限制 \n🔘 活跃时间: 显示附近的人的隐身活跃状态 \n🔘 允许下载: 解锁动态图片与视频下载权限 \n🔘 隐身配额: 隐身消息发送配额修改为 999 \n🔘 更新弹窗: 屏蔽版本更新提示弹窗 \n🔘 地图次数: 实验性测试提高每日地图位置切换次数，该功能仅本地实现，可能不可过度突破服务器限制\n【贴吧去广告】per_filter_video:设置为1则推荐页不展示视频贴\n【Reddit 去广告】\n1️⃣ NSFW\n\n填写 Nsfw 时, 表示关闭 NSFW 提示, 其他值表示恢复默认行为\n\n2️⃣ TRANSLATION\n\n填写 http-request 时, 表示开启自动翻译, # 表示关闭自动翻译.\n⚠️ 由于无法区分首次原始请求和手动点击翻译的请求, 开启之后 App 内切换功能就无效了...\n\n3️⃣ TRANSLATION_VALUE\n\n如果 Reddit 改了行为, 可以自己改这个值\n【YouTubeNoAds】\n▶ 参数说明:\n\n - 屏蔽按钮: 默认开启，可手动切换\n\n - 调试模式: 默认关闭，非调试无需切换\n\n - 翻译语言: 默认关闭，可自定义语言代码\n\n\n▶ 语言代码：\n\n - 翻译语言可根据需求自定义，语言代码遵循Google Translate Languages Codes，示例如下↓\n\n - 简中: zh-Hans，日语: ja，韩语: ko，西语: es，法语: fr\n【🆂🅿🅾🆃🅸🅵🆈】\n\n模块说明：请停用其他 Spotify 歌词模块，避免重复处理同一接口。若歌词存在官方歌词则优先选用；外部歌词按歌名、歌手和时长匹配；默认使用网易、谷歌等翻译，支持选填百度翻译APPID，启用后若不存在网易人工翻译，则首选百度翻译，可一定程度上避免翻译受限。 \n\n脚本来源：Reukix \n\n歌词补全：启用歌词补全 \n\n歌词翻译：启用歌词翻译 \n\n翻译语言：翻译目标语言，默认 zh-CN \n\n百度翻译：启用百度翻译 \n\n翻译账户：百度翻译开放平台的 APP ID \n\n翻译密钥：百度翻译开放平台的密钥\n【🆃🅾🅿🅼🅾🅳🆂】分流代理策略\n\n· 支持填入节点名称或代理分组名称指定分流\n\n· 默认值是首页节点\n\n· 本模块包含去广告规则，可去除部分第三方广告，仅适用于登陆后使用，不适用于软件注册。Talkatone 针对使用者 IP 的审查趋于严格，单纯的分流的做法可能在部分节点或网络环境下不再有效，建议分别测试有效节点\n【哔哩哔哩增强】动态最常访问\n- auto: 仅当列表中存在直播状态时显示\n- show: 始终显示\n- hide: 始终隐藏\n\n创作中心\n- 0: 隐藏\n- 1: 显示\n\n过滤置顶评论广告\n- 0: 关闭\n- 1: 开启\n\n优化评论区加载: 默认开启，配置为"#"时关闭\n\n空降助手: 默认开启，配置为"#"时关闭\n\n空降助手策略: 默认直连，建议配置为代理策略\n\n屏蔽P2P: 默认开启，配置为"#"时关闭\n\n日志等级\n- 1: DEBUG\n- 2: INFO\n- 3: WARN\n- 4: ERROR\n- 5: OFF\n【Discord 自动翻译】翻译条目数量：单次响应最多筛选的消息条数，默认 50，最大 1000。\n\n翻译目标语言：填写 Google 翻译支持的语言代码，默认 zh-CN（简体中文）。支持 zh-TW（台湾繁体）、zh-HK（香港繁体）、ja（日语）、ko（韩语）等。\n\n两个参数可以独立修改。\n【GitHub 资源加速】将 GitHub RAW 资源重定向至国内可用的镜像资源站。支持选填 jsdelivr 的其他 CDN 节点，默认CDN策略为直连策略，可自定义其他策略，若直连正常则不建议修改\n🔘 默认CDN节点\n· 默认填写：cdn\n· 可选填写：fastly\n· 可选填写：gcore\n🔘 默认CDN策略：\n· 默认填写：DIRECT\n· 可选填写：PROXY 或其他节点、代理分组的完整名称\n【GitHub 私库访问】参数说明\n\n按GitHub用户名自动注入Token的授权模块\n\n·在用户处填写所需的GitHub用户名\n\n·在密钥处填写所需的PAT密钥\n\n·密钥格式为：github_pat_xxxxx\n\n·默认未启用，启用用户请将对应参数的 #http 改为 http\n【苹果助手】🔘 商店下载加速填#可禁用，加速地址可选填其他\n\n· 默认金山CDN，CDN结果为本省\n\n iosapps.itunes.apple.com.download.ks-cdn.com\n\n· 备选网宿CDN，CDN结果为本省或临近省份\n\n hls.itunes.apple.com.mwcname.com\n\n· 备选阿里CDN，CDN结果可能异地\n\n iosapps.itunes.apple.com.m.alikunlun.net\n\n🔘 系统升级加速填#可禁用，加速地址可选填其他\n\n· 默认金山CDN，CDN结果为本省\n\n updates.cdn-apple.com.download.ks-cdn.com\n\n· 备选网宿CDN，CDN结果为本省或临近省份\n\n updates.cdn-apple.com.mwcname.com\n\n· 备选阿里CDN，CDN结果可能异地\n\n updates.cdn-apple.com.w.kunlunca.com
 
 #====================================================================
 # 去广告合集（All-in-One）
 #
-# 整合内容：🅲🅻🅴🅰🅽🅴🆁、🅷🅾🅽🅶🅶🆄🅾、🅲🆃🆁🅸🅿🅰🅳、🆁🆄🅸🆇🅸🅽🅶、🆃🅴🅻🅳🅰🅿🅿、🆀🅸🅽🅶🅰🅿🅿、🅲🅰🅳🆅🅸🅴🆆、高德地图、彩云天气、一汽大众、DiDiClean、小红书、微博去广告&净化、WeiboIntl、贴吧去广告、Reddit 去广告、SDGun 社区去广告、YouTubeNoAds、X 网页版去广告、🆂🅿🅾🆃🅸🅵🆈、🆃🅾🅿🅼🅾🅳🆂、哔哩哔哩增强
+# 整合内容：🅲🅻🅴🅰🅽🅴🆁、🅷🅾🅽🅶🅶🆄🅾、🅲🆃🆁🅸🅿🅰🅳、🆁🆄🅸🆇🅸🅽🅶、🆃🅴🅻🅳🅰🅿🅿、🆀🅸🅽🅶🅰🅿🅿、🅲🅰🅳🆅🅸🅴🆆、高德地图、彩云天气、一汽大众、DiDiClean、小红书、微博去广告&净化、WeiboIntl、贴吧去广告、Reddit 去广告、SDGun 社区去广告、YouTubeNoAds、X 网页版去广告、🆂🅿🅾🆃🅸🅵🆈、🆃🅾🅿🅼🅾🅳🆂、哔哩哔哩增强、BiliIntlClean、Discord 自动翻译、GitHub 资源加速、GitHub 私库访问、GitHub 限制解除、苹果助手
 # 未合并：哔哩哔哩国际版（白B）
 #
 # 特别提示（哔哩哔哩增强）：
@@ -431,6 +431,22 @@ AND,((DOMAIN-SUFFIX,chat.bilibili.com), (OR,((DOMAIN-KEYWORD,stun), (DOMAIN-KEYW
 {{{屏蔽P2P}}},4483,REJECT-NO-DROP,pre-matching
 {{{屏蔽P2P}}},9102,REJECT-NO-DROP,pre-matching
 
+# ------- Discord 自动翻译 | Discord（历史消息双语对照） -------
+# 可调参数: 翻译条目数量=50, 翻译目标语言=zh-CN
+AND,((PROTOCOL,UDP),(DEST-PORT,443),(DOMAIN-SUFFIX,discord.com)),REJECT
+AND,((PROTOCOL,UDP),(DEST-PORT,443),(DOMAIN-SUFFIX,discordapp.com)),REJECT
+
+# ------- GitHub 资源加速 | GitHub RAW 重定向 jsDelivr CDN -------
+# 可调参数: 默认CDN节点=cdn, 默认CDN策略=DIRECT
+# 直连镜像网站
+DOMAIN-SUFFIX,jsdelivr.net,{{{默认CDN策略}}}
+
+# ------- 苹果助手 | App Store 下载 / 系统升级加速 -------
+# 可调参数: 商店下载加速=iosapps, 商店加速地址=iosapps.itunes.apple.com.download.ks-cdn.com, 系统升级加速=updates, 升级加速地址=updates.cdn-apple.com.download.ks-cdn.com
+# 加速需要直连
+DOMAIN-SUFFIX,apps.apple.com,DIRECT
+DOMAIN-SUFFIX,itunes.apple.com,DIRECT
+
 # ------- 贴吧去广告规则集（内联自 app2smile/rules） -------
 DOMAIN,180.76.76.200,REJECT-DROP
 IP-CIDR,180.76.76.200/32,REJECT-DROP,no-resolve
@@ -705,6 +721,14 @@ IP-CIDR,119.29.29.99/32,REJECT,no-resolve
 ^https:\/\/.*-spclient\.spotify\.com(:443)?\/pam-view-service\/ - reject
 ^https:\/\/.*37i9dQZF1EYkqdzj48dyYq - reject
 
+# ------- GitHub 资源加速 | GitHub RAW 重定向 jsDelivr CDN -------
+# 可调参数: 默认CDN节点=cdn, 默认CDN策略=DIRECT
+# 优先匹配带有 refs/heads/ 的 raw 路径
+^https?://raw\.githubusercontent\.com/([^/]+)/([^/]+)/refs/heads/([^/]+)/(.*)$ https://{{{默认CDN节点}}}.jsdelivr.net/gh/$1/$2@$3/$4 302
+
+# 匹配标准分支名/标签名/Commit 的 raw 路径
+^https?://raw\.githubusercontent\.com/([^/]+)/([^/]+)/([^/]+)/(.*)$ https://{{{默认CDN节点}}}.jsdelivr.net/gh/$1/$2@$3/$4 302
+
 [Header Rewrite]
 # ------- Reddit 去广告 | Reddit -------
 # 可调参数: NSFW="Nsfw", TRANSLATION="http-request", TRANSLATION_VALUE="enabled, seo, zh-hans"
@@ -714,6 +738,13 @@ IP-CIDR,119.29.29.99/32,REJECT,no-resolve
 # ------- 🆂🅿🅾🆃🅸🅵🆈 | Spotify -------
 # 可调参数: 歌词补全="true", 歌词翻译="true", 翻译语言="zh-CN", 百度翻译="false", 翻译账户="自行申请并填写", 翻译密钥="自行申请并填写"
 http-request ^https:\/\/(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?\/(?:user-customization-service\/v1\/customize|nebula\/v1\/configuration\/attributes|remote-config-resolver\/v3\/configuration)\/?(?:\?[^#]*)?$ header-del if-none-match
+
+# ------- GitHub 私库访问 | GitHub 私库（按用户名注入 Token） -------
+# 可调参数: 🔘启用用户1=#http, 用户1=填写GitHub用户名, 密钥1=填写你的PAT密钥, 🔘启用用户2=#http, 用户2=填写GitHub用户名, 密钥2=填写你的PAT密钥, 🔘启用用户3=#http, 用户3=填写GitHub用户名, 密钥3=填写你的PAT密钥, 🔘启用用户4=#http, 用户4=填写GitHub用户名, 密钥4=填写你的PAT密钥
+{{{🔘启用用户1}}}-request ^https?:\/\/(raw|gist)\.githubusercontent\.com/{{{用户1}}}/ header-replace Authorization "token {{{密钥1}}}"
+{{{🔘启用用户2}}}-request ^https?:\/\/(raw|gist)\.githubusercontent\.com/{{{用户2}}}/ header-replace Authorization "token {{{密钥2}}}"
+{{{🔘启用用户3}}}-request ^https?:\/\/(raw|gist)\.githubusercontent\.com/{{{用户3}}}/ header-replace Authorization "token {{{密钥3}}}"
+{{{🔘启用用户4}}}-request ^https?:\/\/(raw|gist)\.githubusercontent\.com/{{{用户4}}}/ header-replace Authorization "token {{{密钥4}}}"
 
 [Map Local]
 # ------- 🆁🆄🅸🆇🅸🅽🅶 | 瑞幸咖啡 -------
@@ -769,6 +800,9 @@ http-request ^https:\/\/(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::44
 ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus$ header="content-type: application/grpc|grpc-status: 0" data-type=base64 data="AAAAABMKEQgCEgl0ZWVuYWdlcnMgAioA"
 ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ header="content-type: application/grpc|grpc-status: 0" data-type=base64 data="AAAAACEaHeaQnOe0ouinhumikeOAgeeVquWJp+aIlnVw5Li7KAE="
 ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.(?:view\.v1\.View\/TFInfo|viewunite\.v1\.View\/(?:PlayPause|ViewEndPage))$ header="content-type: application/grpc|grpc-status: 0" data-type=base64 data="AAAAAAA="
+
+# ------- BiliIntlClean | 哔哩哔哩国际版（白B） -------
+^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?(.+)$ data-type=text data="{}" status-code=200
 
 [Body Rewrite]
 # ------- 🅲🅻🅴🅰🅽🅴🆁 | 红果短剧 / 包子漫画网页版 / 小蚁摄像机 / 德施曼 / Pinterest -------
@@ -966,6 +1000,9 @@ http-response-jq ^https:\/\/api\.bilibili\.com\/x\/pd-proxy\/tracker\? '.data[][
 http-response-jq ^https:\/\/api\.bilibili\.com\/pgc\/view\/v2\/app\/season\? 'del(.data.payment)'
 http-response-jq ^https:\/\/api\.bilibili\.com\/pgc\/page\/channel\? '.data.modules |= map(select(.type != "TIP") | if .type == "BANNER" then .module_data.items |= map(select(.url | startswith("https://www.bilibili.com/blackboard/era/") | not)) else . end)'
 
+# ------- BiliIntlClean | 哔哩哔哩国际版（白B） -------
+http-response-jq ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\?(.+) '.data.sections_v2[1].title |= null | .data.sections_v2[1].items |= map(select((.title | IN("联系客服", "稿件管理", "我的钱包", "我的NFT")) | not))'
+
 [Script]
 # ------- 🅲🅻🅴🅰🅽🅴🆁 | 红果短剧 / 包子漫画网页版 / 小蚁摄像机 / 德施曼 / Pinterest -------
 # 包子漫画网页
@@ -1035,5 +1072,20 @@ bilibili.bilibili.live = type=http-response,pattern=^https:\/\/api\.live\.bilibi
 bilibili.bilibili.webpage = type=http-response,pattern=^https:\/\/www\.bilibili\.com\/blackboard\/era\/[^?]+\.html\?,requires-body=1,max-size=-1,engine=webview,script-path=https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/webpage.bilibili.js
 bilibili.bilibili.protobuf.response = type=http-response,pattern=^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(?:app\.(?:show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(?:unite)?\.v1\.View\/(?:View|ViewProgress|RelatesFeed|AIRelateAsync)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$,argument="{"displayUpList":"{{{动态最常访问}}}","purifyComment":{{{过滤置顶评论广告}}},"sponsorBlock":"{{{空降助手}}}","logLevel":"{{{日志等级}}}"}",requires-body=1,binary-body-mode=1,max-size=-1,engine=webview,script-path=https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.protobuf.response.js
 
+# ------- Discord 自动翻译 | Discord（历史消息双语对照） -------
+# 可调参数: 翻译条目数量=50, 翻译目标语言=zh-CN
+discord.Discord-Local-Translate = type=http-response,pattern=^https://(discord|discordapp).com/api/v\d+/channels/\d+/messages,requires-body=1,max-size=524288,timeout=10,script-path=https://raw.githubusercontent.com/LOWERTOP/Shadowrocket-First/main/JS/discord_translate.js,argument={{{翻译条目数量}}}|{{{翻译目标语言}}}
+
+# ------- GitHub 限制解除 | GitHub zh-CN 语言限制 / 429 -------
+ghlimit.GitHub = type=http-request, script-path=https://lowertop.github.io/Shadowrocket-First/JS/github-header.js, pattern=^https:\/\/[a-z0-9-]+\.githubusercontent\.com, max-size=0, timeout=30, script-update-interval=0, enable=true
+
+[Host]
+# ------- 苹果助手 | App Store 下载 / 系统升级加速 -------
+# 可调参数: 商店下载加速=iosapps, 商店加速地址=iosapps.itunes.apple.com.download.ks-cdn.com, 系统升级加速=updates, 升级加速地址=updates.cdn-apple.com.download.ks-cdn.com
+{{{商店下载加速}}}.itunes.apple.com = {{{商店加速地址}}}
+{{{系统升级加速}}}.cdn-apple.com = {{{升级加速地址}}}
+{{{系统升级加速}}}.cdn-apple.com.akadns.net = {{{升级加速地址}}}
+{{{系统升级加速}}}.g.aaplimg.com = {{{升级加速地址}}}
+
 [MITM]
-hostname = %APPEND% static-tw.baozimh.com,*.baozimhcn.com,*.dzmanga.com,*.xiaoyi.com,api.pinterest.com,m.ctrip.com,capi.lkcoffee.com,ecapi.lkcoffee.com,img0*.luckincoffeecdn.com,sgi.teld.cn,sgi.teld.cc,api.qing2000.com,api.qing2000.net,api.qing2000.cc,api.qing2000.cn,223.5.5.5,ai.amap.com,info.amap.com,m5-zb.amap.com,m5.amap.com,oss.amap.com,sns.amap.com,starplucker.cyapi.cn,wrapper.cyapi.cn,oneapp-api.faw-vw.com,common.diditaxi.com.cn,freight.xiaojukeji.com,daijia.kuaidadi.com,162.14.157.*,ct.xiaojukeji.com,res.xiaojukeji.com,conf.diditaxi.com.cn,api.udache.com,123.207.209.*,112.53.55.225,120.241.142.*,120.241.143.*,116.85.*,139.199.240.84,ci.xiaohongshu.com,edith.xiaohongshu.com,live-go.xiaohongshu.com,live-mall.xiaohongshu.com,live-room.xiaohongshu.com,rec.xiaohongshu.com,referee.xiaohongshu.com,search.xiaohongshu.com,so.xiaohongshu.com,www.xiaohongshu.com,*.weibo.cn,*.weibo.com,weibo.com,api.weibo.cn,weibointl.api.weibo.cn,tiebac.baidu.com,gql.reddit.com,gql-fed.reddit.com,mag1.sdgun.net,*.googlevideo.com,youtubei.googleapis.com,x.com,spclient.wg.spotify.com,spclient.spotify.com,*spclient.spotify.com,*-spclient.wg.spotify.com,grpc.biliapi.net,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,www.bilibili.com,line3-h5-mobile-api.biligame.com
+hostname = %APPEND% static-tw.baozimh.com,*.baozimhcn.com,*.dzmanga.com,*.xiaoyi.com,api.pinterest.com,m.ctrip.com,capi.lkcoffee.com,ecapi.lkcoffee.com,img0*.luckincoffeecdn.com,sgi.teld.cn,sgi.teld.cc,api.qing2000.com,api.qing2000.net,api.qing2000.cc,api.qing2000.cn,223.5.5.5,ai.amap.com,info.amap.com,m5-zb.amap.com,m5.amap.com,oss.amap.com,sns.amap.com,starplucker.cyapi.cn,wrapper.cyapi.cn,oneapp-api.faw-vw.com,common.diditaxi.com.cn,freight.xiaojukeji.com,daijia.kuaidadi.com,162.14.157.*,ct.xiaojukeji.com,res.xiaojukeji.com,conf.diditaxi.com.cn,api.udache.com,123.207.209.*,112.53.55.225,120.241.142.*,120.241.143.*,116.85.*,139.199.240.84,ci.xiaohongshu.com,edith.xiaohongshu.com,live-go.xiaohongshu.com,live-mall.xiaohongshu.com,live-room.xiaohongshu.com,rec.xiaohongshu.com,referee.xiaohongshu.com,search.xiaohongshu.com,so.xiaohongshu.com,www.xiaohongshu.com,*.weibo.cn,*.weibo.com,weibo.com,api.weibo.cn,weibointl.api.weibo.cn,tiebac.baidu.com,gql.reddit.com,gql-fed.reddit.com,mag1.sdgun.net,*.googlevideo.com,youtubei.googleapis.com,x.com,spclient.wg.spotify.com,spclient.spotify.com,*spclient.spotify.com,*-spclient.wg.spotify.com,grpc.biliapi.net,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,www.bilibili.com,line3-h5-mobile-api.biligame.com,discord.com,discordapp.com,raw.githubusercontent.com,gist.githubusercontent.com,*.githubusercontent.com
