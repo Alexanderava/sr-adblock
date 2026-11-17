@@ -12,7 +12,6 @@
     --stroke:rgba(15,23,42,.08);
     --text:#101828; --sub:#5b6b82;
     --accent:#2f6bff; --accent2:#5b8cff;
-    --ok:#16a34a;
     --shadow:0 18px 50px -20px rgba(16,24,40,.28);
   }
   @media (prefers-color-scheme: dark){
@@ -37,7 +36,7 @@
       linear-gradient(180deg, var(--bg), var(--bg2));
     display:flex; justify-content:center;
   }
-  .wrap{width:100%; max-width:640px}
+  .wrap{width:100%; max-width:660px}
   .card{
     background:var(--card);
     border:1px solid var(--stroke);
@@ -56,14 +55,10 @@
     border:1px solid color-mix(in srgb, var(--accent) 26%, transparent);
     padding:5px 11px; border-radius:999px;
   }
-  h1{
-    margin:14px 0 8px; font-size:27px; line-height:1.24; letter-spacing:-.02em;
-  }
+  h1{margin:14px 0 8px; font-size:27px; line-height:1.24; letter-spacing:-.02em}
   h1 span{background:linear-gradient(92deg,var(--accent),#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
   .lead{margin:0; color:var(--sub); font-size:14px; line-height:1.65}
-  .stats{
-    display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:22px 0 6px;
-  }
+  .stats{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:22px 0 6px}
   .stat{
     text-align:center; padding:13px 6px; border-radius:16px;
     background:color-mix(in srgb, var(--text) 4%, transparent);
@@ -78,13 +73,11 @@
     background:linear-gradient(135deg,var(--accent),var(--accent2));
     border-radius:18px;
     box-shadow:0 12px 28px -12px color-mix(in srgb, var(--accent) 72%, transparent);
-    transition:transform .16s ease, box-shadow .16s ease;
+    transition:transform .16s ease;
   }
   .install:active{transform:scale(.985)}
   .hint{text-align:center; font-size:12px; color:var(--sub); margin:0 0 4px}
-  .row{
-    display:flex; gap:10px; margin-top:14px;
-  }
+  .row{display:flex; gap:10px; margin-top:14px}
   .ghost{
     flex:1; padding:12px; text-align:center; text-decoration:none;
     font-size:13.5px; font-weight:600; color:var(--text);
@@ -93,28 +86,32 @@
   }
   h2{
     font-size:13px; letter-spacing:.08em; text-transform:uppercase;
-    color:var(--sub); margin:26px 0 10px; font-weight:700;
+    color:var(--sub); margin:28px 0 12px; font-weight:700;
   }
-  ul{list-style:none; margin:0; padding:0}
-  li{
-    display:flex; align-items:center; gap:10px;
-    padding:9px 12px; margin-bottom:6px; border-radius:12px;
+  h2 small{font-size:11px; letter-spacing:0; text-transform:none; color:var(--sub); font-weight:500; margin-left:6px}
+  .apps{display:flex; flex-direction:column; gap:7px}
+  .app{
+    padding:11px 14px; border-radius:14px;
     background:color-mix(in srgb, var(--text) 3.5%, transparent);
     border:1px solid var(--stroke);
-    font-size:13.5px;
   }
-  li em{
-    font-style:normal; font-size:10.5px; font-weight:700; letter-spacing:.04em;
-    color:var(--accent); min-width:42px; text-align:center;
-    background:color-mix(in srgb, var(--accent) 10%, transparent);
-    border-radius:6px; padding:3px 0;
+  .app b{
+    display:flex; align-items:center; gap:7px;
+    font-size:13.5px; font-weight:700; letter-spacing:-.01em;
   }
-  li span{color:var(--sub); font-size:12.5px; margin-left:auto; text-align:right}
+  .app b em{
+    font-style:normal; font-size:9.5px; font-weight:700; letter-spacing:.04em;
+    color:var(--accent); padding:2px 6px; border-radius:5px;
+    background:color-mix(in srgb, var(--accent) 11%, transparent);
+    border:1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  }
+  .app p{margin:5px 0 0; font-size:12.5px; line-height:1.7; color:var(--sub)}
+  .app p i{font-style:normal; color:color-mix(in srgb, var(--sub) 62%, transparent); padding:0 3px}
   .note{
-    margin-top:18px; padding:14px 15px; border-radius:14px;
+    margin-top:20px; padding:14px 15px; border-radius:14px;
     background:color-mix(in srgb, #f59e0b 9%, transparent);
     border:1px solid color-mix(in srgb, #f59e0b 26%, transparent);
-    font-size:12.5px; line-height:1.75; color:var(--text);
+    font-size:12.5px; line-height:1.75;
   }
   .note b{color:#b45309}
   @media (prefers-color-scheme: dark){ .note b{color:#fbbf24} }
@@ -128,13 +125,13 @@
     <header>
       <div class="badge">SHADOWROCKET MODULE</div>
       <h1>去广告<span>合集</span></h1>
-      <p class="lead">合并 20 个去广告模块与一套通用规则集<br>一个文件，导入即用</p>
+      <p class="lead">21 个去广告模块 + 一套通用规则集<br>合并成一个文件，导入即用</p>
     </header>
 
     <div class="stats">
-      <div class="stat"><b>20</b><i>个模块</i></div>
-      <div class="stat"><b>377</b><i>条规则</i></div>
-      <div class="stat"><b>51</b><i>个解密域名</i></div>
+      <div class="stat"><b>21</b><i>个模块</i></div>
+      <div class="stat"><b>381</b><i>条规则</i></div>
+      <div class="stat"><b>65</b><i>个解密域名</i></div>
     </div>
 
     <a class="install" id="install"
@@ -146,15 +143,135 @@
       <a class="ghost" href="https://github.com/Alexanderava/sr-adblock" target="_blank" rel="noopener">查看仓库</a>
     </div>
 
-    <h2>包含内容</h2>
-    <ul>
-      <li><em>国内</em>微博 · 微博轻享版 · 贴吧 · 小红书<span>含去水印</span></li>
-      <li><em>国内</em>携程 · 瑞幸 · 特来电 · 高德 · 彩云天气 · 一汽大众</li>
-      <li><em>国内</em>红果短剧 · 包子漫画 · 小蚁摄像机 · 德施曼 · 浩辰 CAD</li>
-      <li><em>海外</em>YouTube · Spotify · Reddit · X 网页版<span>含画中画</span></li>
-      <li><em>海外</em>Talkatone · SDGun 社区 · Pinterest</li>
-      <li><em>通用</em>AntiAD 规则集<span>字节 / 广点通 / 友盟</span></li>
-    </ul>
+    <h2>去掉了哪些广告 <small>共 25 个 App / 站点</small></h2>
+    <div class="apps">
+
+      <div class="app">
+        <b>微博</b>
+        <p>开屏<i>·</i>热搜榜推广<i>·</i>超话推广<i>·</i>评论区广告<i>·</i>转发区广告<i>·</i>详情页广告<i>·</i>发现页推广<i>·</i>每日弹窗<i>·</i>顶部 tab 分组推广<i>·</i>信息收集埋点</p>
+      </div>
+
+      <div class="app">
+        <b>微博轻享版</b>
+        <p>热搜词<i>·</i>搜索发现<i>·</i>「我的」页冗余入口</p>
+      </div>
+
+      <div class="app">
+        <b>百度贴吧</b>
+        <p>开屏广告<i>·</i>信息流广告<i>·</i>推荐页视频贴（可关）<i>·</i>广告域名 DNS 查询</p>
+      </div>
+
+      <div class="app">
+        <b>小红书</b>
+        <p>开屏<i>·</i>信息流广告<i>·</i>搜索广告<i>·</i>广告素材引导<i>·</i>营销盒子触发<i>·</i>图片与视频水印<i>·</i>秒针归因<i>·</i>埋点上报<i>·</i>QUIC 强制走 TCP</p>
+      </div>
+
+      <div class="app">
+        <b>滴滴出行</b>
+        <p>开屏<i>·</i>首页推荐位<i>·</i>底栏推广<i>·</i>「我的」天天领福利 / 金融服务 / 更多服务卡片<i>·</i>优惠商城<i>·</i>活动 feeds<i>·</i>行程中广告组件</p>
+      </div>
+
+      <div class="app">
+        <b>携程</b>
+        <p>开屏<i>·</i>首页弹窗<i>·</i>信息流 / Banner<i>·</i>广告埋点 ma-adx<i>·</i>TCP 网关（可切）</p>
+      </div>
+
+      <div class="app">
+        <b>瑞幸咖啡</b>
+        <p>开屏广告<i>·</i>点单弹窗<i>·</i>首页营销位<i>·</i>养成日历<i>·</i>礼品卡推荐<i>·</i>广告图片资源</p>
+      </div>
+
+      <div class="app">
+        <b>特来电</b>
+        <p>开屏广告聚合<i>·</i>广告 SDK<i>·</i>广告位接口<i>·</i>商城轮播<i>·</i>PLUS 促销<i>·</i>券包售卖<i>·</i>福利群二维码<i>·</i>友盟 / Bugly / 字节埋点</p>
+      </div>
+
+      <div class="app">
+        <b>高德地图</b>
+        <p>开屏<i>·</i>首页 Banner<i>·</i>搜索热词与提示词<i>·</i>附近点评推广卡<i>·</i>天气页增值位<i>·</i>AI 推荐位<i>·</i>广告图片 CDN<i>·</i>埋点上报</p>
+      </div>
+
+      <div class="app">
+        <b>彩云天气</b>
+        <p>首页推广卡<i>·</i>搜索推荐<i>·</i>弹窗与浮层<i>·</i>活动位<i>·</i>SVIP 推荐<i>·</i>广告统计域名</p>
+      </div>
+
+      <div class="app">
+        <b>一汽大众</b>
+        <p>开屏展位<i>·</i>首页 Banner 与浮标<i>·</i>权益卡<i>·</i>内容推荐流<i>·</i>活动广场<i>·</i>搜索提示词</p>
+      </div>
+
+      <div class="app">
+        <b>红果短剧</b>
+        <p>阅读页广告<i>·</i>广告位接口<i>·</i>广告视频资源<i>·</i>信息流推广</p>
+      </div>
+
+      <div class="app">
+        <b>包子漫画（网页版）</b>
+        <p>页面元素级广告<i>·</i>安装 App 横幅</p>
+      </div>
+
+      <div class="app">
+        <b>小蚁摄像机</b>
+        <p>广告接口<i>·</i>配置下发广告位</p>
+      </div>
+
+      <div class="app">
+        <b>德施曼</b>
+        <p>多盟广告网络<i>·</i>广告点击归因<i>·</i>Talk-Plus 广告 SDK<i>·</i>行为追踪<i>·</i>友盟 / 个推上报<i>·</i>Shopee 打点</p>
+      </div>
+
+      <div class="app">
+        <b>浩辰 CAD 看图王</b>
+        <p>广告连接（纯规则，无需解密）</p>
+      </div>
+
+      <div class="app">
+        <b>Qing</b>
+        <p>开屏广告<i>·</i>火山引擎 APMPlus 遥测<i>·</i>MobTech 隐私追踪<i>·</i>HTTPDNS（另有 6 项本地解锁，默认关）</p>
+      </div>
+
+      <div class="app">
+        <b>YouTube</b>
+        <p>视频广告<i>·</i>首页与搜索推广<i>·</i>Shorts / 上传 / 选段按钮（可关）<i>·</i>画中画<i>·</i>YouTube Music 广告</p>
+      </div>
+
+      <div class="app">
+        <b>Spotify</b>
+        <p>首页广告<i>·</i>播放页广告<i>·</i>会员配置解锁<i>·</i>歌词补全与翻译</p>
+      </div>
+
+      <div class="app">
+        <b>Reddit</b>
+        <p>推广帖<i>·</i>详情页广告<i>·</i>NSFW 提示<i>·</i>自动翻译</p>
+      </div>
+
+      <div class="app">
+        <b>X（推特网页版）</b>
+        <p>时间线推广帖<i>·</i>详情页推广</p>
+      </div>
+
+      <div class="app">
+        <b>SDGun 社区</b>
+        <p>开屏广告<i>·</i>轮播广告</p>
+      </div>
+
+      <div class="app">
+        <b>Pinterest</b>
+        <p>首页推广帖<i>·</i>相关推荐推广帖</p>
+      </div>
+
+      <div class="app">
+        <b>Talkatone</b>
+        <p>第三方广告（AdMob / InMobi / Criteo / Smaato / AppLovin / Amazon 广告系统等）</p>
+      </div>
+
+      <div class="app">
+        <b>AntiAD 通用兜底 <em>最后生效</em></b>
+        <p>淘宝<i>·</i>贴吧<i>·</i>微博<i>·</i>微信公众号<i>·</i>字节穿山甲<i>·</i>腾讯广点通<i>·</i>友盟<i>·</i>快手<i>·</i>Viber<i>·</i>各类广告联盟与统计上报</p>
+      </div>
+
+    </div>
 
     <div class="note">
       <b>三件事必须做到</b><br>
@@ -165,7 +282,7 @@
 
     <footer>
       基于 <a href="https://github.com/LOWERTOP/Shadowrocket-First" target="_blank" rel="noopener">LOWERTOP/Shadowrocket-First</a> 及社区模块合并<br>
-      已排除哔哩哔哩增强 / 国际版 · 仅合并，版权归各原作者
+      已排除哔哩哔哩增强 / 国际版 · 仅做合并，版权归各原作者
     </footer>
   </div>
 </div>
@@ -173,6 +290,7 @@
 <script>
   var RAW = "https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock.sgmodule";
   document.getElementById("install").href = "shadowrocket://install?module=" + RAW;
+
   var btn = document.getElementById("copy");
   btn.addEventListener("click", function (e) {
     e.preventDefault();
