@@ -2,7 +2,7 @@
 
 把 [LOWERTOP/Shadowrocket-First](https://github.com/LOWERTOP/Shadowrocket-First) 及社区收录的去广告模块合并成一个 `.sgmodule`，一个文件导入即用。
 
-**未合并**：哔哩哔哩国际版（白B）。
+**未合并**：无（社区主要模块已全部纳入）。
 
 ## 安装
 
@@ -23,6 +23,7 @@ https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock.sgmodule
 | 微博轻享版 | 热搜词 · 搜索发现 · 「我的」页冗余入口 |
 | 百度贴吧 | 开屏广告 · 信息流广告 · 推荐页视频贴（可关）· 广告域名 DNS 查询 |
 | 哔哩哔哩 | 开屏广告 · 首页/动态/搜索广场推广位 · 会员购与付费推广素材 · 直播带货卡片 · 游戏中心大卡 · 置顶评论广告 · 播放结束页推荐 · 青少年模式提示 · P2P 上传（可关）· 空降助手（可关） |
+| 哔哩哔哩国际版（白B） | 热搜 · 搜索发现 · 「我的」页冗余入口与卡片 |
 | 小红书 | 开屏 · 信息流 · 搜索广告 · 广告素材引导 · 营销盒子触发 · 图片与视频水印 · 秒针归因 · 埋点上报 · QUIC 强制走 TCP |
 | 滴滴出行 | 开屏 · 首页推荐位 · 底栏推广 · 「我的」福利/金融/更多服务卡片 · 优惠商城 · 活动 feeds · 行程中广告组件 |
 | 携程 | 开屏 · 首页弹窗 · 信息流 / Banner · 广告埋点 ma-adx · TCP 网关（可切） |
@@ -44,11 +45,16 @@ https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock.sgmodule
 | SDGun 社区 | 开屏广告 · 轮播广告 |
 | Pinterest | 首页推广帖 · 相关推荐推广帖 |
 | Talkatone | AdMob / InMobi / Criteo / Smaato / AppLovin / Amazon 广告系统 |
+| Discord | 历史消息自动翻译（Google 翻译）· 双语对照 · 可调条目数与目标语言 · 阻断 UDP 443 |
+| GitHub 资源加速 | RAW 资源 302 到 jsDelivr CDN · 可选 cdn / fastly / gcore 节点 |
+| GitHub 私库访问 | 按用户名自动注入 PAT Token · 支持 4 个账号 · 私密仓库 raw / gist · 默认未启用 |
+| GitHub 限制解除 | 解除 zh-CN 语言限制 · 缓解 429 Too Many Requests |
+| 苹果助手 | App Store 下载走金山 CDN · 系统升级走 cdn-apple · 可换网宿 / 阿里 CDN |
 | AntiAD 通用兜底 | 淘宝 · 贴吧 · 微博 · 微信公众号 · 字节穿山甲 · 腾讯广点通 · 友盟 · 快手 · Viber · 各类广告联盟与统计上报 |
 
 ## 规模
 
-22 个模块 + 1 套通用规则集 · 391 条规则 · 60 条 URL Rewrite · 26 条 Map Local · 136 条 jq · 38 个脚本 · 71 个 MITM 域名 · 39 个可调参数 · 约 100 KB。
+28 个模块 + 1 套通用规则集 · 396 条规则 · 62 条 URL Rewrite · 27 条 Map Local · 137 条 jq · 40 个脚本 · 76 个 MITM 域名 · 59 个可调参数 · 4 条 Host 映射 · 约 107 KB。
 
 ## 生效前提
 
@@ -56,6 +62,7 @@ https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock.sgmodule
 2. 开启 **HTTPS 解密** 并信任证书，否则 jq / 脚本类模块无效
 3. 部分 App 需清缓存或重装（微博、小红书、贴吧尤其明显）
 4. **哔哩哔哩额外要求**：Shadowrocket ≥ 2.2.81(3096)，并在设置里开启 **HTTP/2 MITM**；低版本请删除哔哩哔哩对应的段落（搜 `哔哩哔哩增强`），或在 `[MITM]` 里排除解密 `-grpc.biliapi.net`
+5. **GitHub 加速与私库互斥**：加速模块会把 RAW 请求 302 到 jsDelivr，导致私库的 Token 注入失效。用私库请删掉「GitHub 资源加速」那两行 URL Rewrite；用加速则保持默认、不开私库开关
 
 ## 自定义
 
