@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f5f7fb">
+<title>去广告合集 · Shadowrocket</title>
+<style>
+  :root{
+    --bg:#f4f6fb; --bg2:#e8eef9;
+    --card:rgba(255,255,255,.72);
+    --stroke:rgba(15,23,42,.08);
+    --text:#101828; --sub:#5b6b82;
+    --accent:#2f6bff; --accent2:#5b8cff;
+    --ok:#16a34a;
+    --shadow:0 18px 50px -20px rgba(16,24,40,.28);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b1220; --bg2:#111b2e;
+      --card:rgba(22,32,50,.72);
+      --stroke:rgba(148,163,184,.16);
+      --text:#e9eefb; --sub:#94a3b8;
+      --accent:#5b8cff; --accent2:#8aa9ff;
+      --shadow:0 20px 60px -24px rgba(0,0,0,.8);
+    }
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    min-height:100vh; padding:28px 18px 44px;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Helvetica Neue",Arial,sans-serif;
+    color:var(--text);
+    background:
+      radial-gradient(900px 500px at 8% -8%, rgba(91,140,255,.20), transparent 60%),
+      radial-gradient(700px 460px at 100% 0%, rgba(167,139,250,.16), transparent 62%),
+      linear-gradient(180deg, var(--bg), var(--bg2));
+    display:flex; justify-content:center;
+  }
+  .wrap{width:100%; max-width:640px}
+  .card{
+    background:var(--card);
+    border:1px solid var(--stroke);
+    border-radius:26px;
+    box-shadow:var(--shadow);
+    backdrop-filter:blur(22px) saturate(180%);
+    -webkit-backdrop-filter:blur(22px) saturate(180%);
+    padding:26px 22px;
+  }
+  header{text-align:center; padding:6px 0 2px}
+  .badge{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:12px; letter-spacing:.06em; font-weight:600;
+    color:var(--accent);
+    background:color-mix(in srgb, var(--accent) 12%, transparent);
+    border:1px solid color-mix(in srgb, var(--accent) 26%, transparent);
+    padding:5px 11px; border-radius:999px;
+  }
+  h1{
+    margin:14px 0 8px; font-size:27px; line-height:1.24; letter-spacing:-.02em;
+  }
+  h1 span{background:linear-gradient(92deg,var(--accent),#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lead{margin:0; color:var(--sub); font-size:14px; line-height:1.65}
+  .stats{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:22px 0 6px;
+  }
+  .stat{
+    text-align:center; padding:13px 6px; border-radius:16px;
+    background:color-mix(in srgb, var(--text) 4%, transparent);
+    border:1px solid var(--stroke);
+  }
+  .stat b{display:block; font-size:19px; letter-spacing:-.02em}
+  .stat i{display:block; margin-top:3px; font-size:11.5px; font-style:normal; color:var(--sub)}
+  .install{
+    display:block; margin:20px 0 10px; padding:16px;
+    text-align:center; text-decoration:none;
+    font-size:16.5px; font-weight:700; color:#fff; letter-spacing:.01em;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    border-radius:18px;
+    box-shadow:0 12px 28px -12px color-mix(in srgb, var(--accent) 72%, transparent);
+    transition:transform .16s ease, box-shadow .16s ease;
+  }
+  .install:active{transform:scale(.985)}
+  .hint{text-align:center; font-size:12px; color:var(--sub); margin:0 0 4px}
+  .row{
+    display:flex; gap:10px; margin-top:14px;
+  }
+  .ghost{
+    flex:1; padding:12px; text-align:center; text-decoration:none;
+    font-size:13.5px; font-weight:600; color:var(--text);
+    background:color-mix(in srgb, var(--text) 5%, transparent);
+    border:1px solid var(--stroke); border-radius:14px;
+  }
+  h2{
+    font-size:13px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--sub); margin:26px 0 10px; font-weight:700;
+  }
+  ul{list-style:none; margin:0; padding:0}
+  li{
+    display:flex; align-items:center; gap:10px;
+    padding:9px 12px; margin-bottom:6px; border-radius:12px;
+    background:color-mix(in srgb, var(--text) 3.5%, transparent);
+    border:1px solid var(--stroke);
+    font-size:13.5px;
+  }
+  li em{
+    font-style:normal; font-size:10.5px; font-weight:700; letter-spacing:.04em;
+    color:var(--accent); min-width:42px; text-align:center;
+    background:color-mix(in srgb, var(--accent) 10%, transparent);
+    border-radius:6px; padding:3px 0;
+  }
+  li span{color:var(--sub); font-size:12.5px; margin-left:auto; text-align:right}
+  .note{
+    margin-top:18px; padding:14px 15px; border-radius:14px;
+    background:color-mix(in srgb, #f59e0b 9%, transparent);
+    border:1px solid color-mix(in srgb, #f59e0b 26%, transparent);
+    font-size:12.5px; line-height:1.75; color:var(--text);
+  }
+  .note b{color:#b45309}
+  @media (prefers-color-scheme: dark){ .note b{color:#fbbf24} }
+  footer{text-align:center; font-size:11.5px; color:var(--sub); margin-top:22px; line-height:1.7}
+  footer a{color:inherit}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <header>
+      <div class="badge">SHADOWROCKET MODULE</div>
+      <h1>去广告<span>合集</span></h1>
+      <p class="lead">合并 20 个去广告模块与一套通用规则集<br>一个文件，导入即用</p>
+    </header>
+
+    <div class="stats">
+      <div class="stat"><b>20</b><i>个模块</i></div>
+      <div class="stat"><b>377</b><i>条规则</i></div>
+      <div class="stat"><b>51</b><i>个解密域名</i></div>
+    </div>
+
+    <a class="install" id="install" href="#">一键安装到 Shadowrocket</a>
+    <p class="hint">需要已安装 Shadowrocket，点击后自动跳转导入</p>
+
+    <div class="row">
+      <a class="ghost" id="copy" href="#">复制模块地址</a>
+      <a class="ghost" href="https://github.com/Alexanderava/sr-adblock" target="_blank" rel="noopener">查看仓库</a>
+    </div>
+
+    <h2>包含内容</h2>
+    <ul>
+      <li><em>国内</em>微博 · 微博轻享版 · 贴吧 · 小红书<span>含去水印</span></li>
+      <li><em>国内</em>携程 · 瑞幸 · 特来电 · 高德 · 彩云天气 · 一汽大众</li>
+      <li><em>国内</em>红果短剧 · 包子漫画 · 小蚁摄像机 · 德施曼 · 浩辰 CAD</li>
+      <li><em>海外</em>YouTube · Spotify · Reddit · X 网页版<span>含画中画</span></li>
+      <li><em>海外</em>Talkatone · SDGun 社区 · Pinterest</li>
+      <li><em>通用</em>AntiAD 规则集<span>字节 / 广点通 / 友盟</span></li>
+    </ul>
+
+    <div class="note">
+      <b>三件事必须做到</b><br>
+      ① 全局路由设为「配置」模式<br>
+      ② 开启 HTTPS 解密并信任证书<br>
+      ③ 微博、小红书、贴吧需清缓存或重装后才生效
+    </div>
+
+    <footer>
+      基于 <a href="https://github.com/LOWERTOP/Shadowrocket-First" target="_blank" rel="noopener">LOWERTOP/Shadowrocket-First</a> 及社区模块合并<br>
+      已排除哔哩哔哩增强 / 国际版 · 仅合并，版权归各原作者
+    </footer>
+  </div>
+</div>
+
+<script>
+  var RAW = "https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock.sgmodule";
+  document.getElementById("install").href = "shadowrocket://install?module=" + RAW;
+
+  var btn = document.getElementById("copy");
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    var done = function () {
+      var old = btn.textContent;
+      btn.textContent = "已复制 ✓";
+      setTimeout(function () { btn.textContent = old; }, 1400);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(RAW).then(done).catch(fallback);
+    } else { fallback(); }
+    function fallback() {
+      var t = document.createElement("textarea");
+      t.value = RAW; t.style.position = "fixed"; t.style.opacity = "0";
+      document.body.appendChild(t); t.select();
+      try { document.execCommand("copy"); done(); } catch (err) {}
+      document.body.removeChild(t);
+    }
+  });
+</script>
+</body>
+</html>
