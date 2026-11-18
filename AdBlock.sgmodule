@@ -1,5 +1,5 @@
 #!name=去广告合集 · All-in-One
-#!desc=合并 LOWERTOP/Shadowrocket-First 及社区共 29 个去广告模块。生成于 2026-11-18 07:55
+#!desc=合并 LOWERTOP/Shadowrocket-First 及社区共 28 个去广告模块。生成于 2026-11-18 08:07
 #!author=LOWERTOP、向晚、iab0x00、奶思 / fmz200、app2smile、xream / QingRex、iab0x00 / Maasea、Reukix、kokoryh、TG-Twilight
 #!homepage=https://github.com/LOWERTOP/Shadowrocket-First
 #!arguments=开屏广告:true,弹窗广告:true,瀑布广告:true,追踪埋点:REJECT,携程网关:DIRECT,屏蔽弹窗:true,屏蔽推广:true,统计策略:REJECT,功能解锁:false,活跃时间:false,允许下载:false,隐身配额:false,更新弹窗:false,地图次数:false,per_filter_video:0,NSFW:"Nsfw",TRANSLATION:"http-request",TRANSLATION_VALUE:"enabled, seo, zh-hans",屏蔽上传按钮:true,屏蔽选段按钮:true,屏蔽Shorts按钮:false,启用调试模式:false,字幕翻译语言:off,歌词补全:"true",歌词翻译:"true",翻译语言:"zh-CN",百度翻译:"false",翻译账户:"自行申请并填写",翻译密钥:"自行申请并填写",节点检测:PROXY,代理分流:PROXY,动态最常访问:auto,创作中心:0,过滤置顶评论广告:1,优化评论区加载:bilibili.protobuf.request,空降助手:bilibili.airborne,空降助手策略:DIRECT,屏蔽P2P:DEST-PORT,日志等级:4,翻译条目数量:50,翻译目标语言:zh-CN,默认CDN节点:cdn,默认CDN策略:DIRECT,🔘启用用户1:#http,用户1:填写GitHub用户名,密钥1:填写你的PAT密钥,🔘启用用户2:#http,用户2:填写GitHub用户名,密钥2:填写你的PAT密钥,🔘启用用户3:#http,用户3:填写GitHub用户名,密钥3:填写你的PAT密钥,🔘启用用户4:#http,用户4:填写GitHub用户名,密钥4:填写你的PAT密钥,商店下载加速:iosapps,商店加速地址:iosapps.itunes.apple.com.download.ks-cdn.com,系统升级加速:updates,升级加速地址:updates.cdn-apple.com.download.ks-cdn.com
@@ -8,7 +8,7 @@
 #====================================================================
 # 去广告合集（All-in-One）
 #
-# 整合内容：🅲🅻🅴🅰🅽🅴🆁、🅷🅾🅽🅶🅶🆄🅾、🅲🆃🆁🅸🅿🅰🅳、🆁🆄🅸🆇🅸🅽🅶、🆃🅴🅻🅳🅰🅿🅿、🆀🅸🅽🅶🅰🅿🅿、🅲🅰🅳🆅🅸🅴🆆、高德地图、彩云天气、一汽大众、DiDiClean、小红书、微博去广告&净化、WeiboIntl、贴吧去广告、Reddit 去广告、SDGun 社区去广告、YouTubeNoAds、X 网页版去广告、🆂🅿🅾🆃🅸🅵🆈、🆃🅾🅿🅼🅾🅳🆂、哔哩哔哩增强、BiliIntlClean、Discord 自动翻译、GitHub 资源加速、GitHub 私库访问、GitHub 限制解除、苹果助手、AWAvenue 秋风广告规则
+# 整合内容：🅲🅻🅴🅰🅽🅴🆁、🅷🅾🅽🅶🅶🆄🅾、🅲🆃🆁🅸🅿🅰🅳、🆁🆄🅸🆇🅸🅽🅶、🆃🅴🅻🅳🅰🅿🅿、🆀🅸🅽🅶🅰🅿🅿、🅲🅰🅳🆅🅸🅴🆆、高德地图、彩云天气、一汽大众、DiDiClean、小红书、微博去广告&净化、WeiboIntl、贴吧去广告、Reddit 去广告、SDGun 社区去广告、YouTubeNoAds、🆂🅿🅾🆃🅸🅵🆈、🆃🅾🅿🅼🅾🅳🆂、哔哩哔哩增强、BiliIntlClean、Discord 自动翻译、GitHub 资源加速、GitHub 私库访问、GitHub 限制解除、苹果助手、AWAvenue 秋风广告规则
 # 通用规则集：AWAvenue 秋风广告规则（998 条）在前，AntiAD（作者自用）最后兜底
 #
 # 特别提示（哔哩哔哩增强）：
@@ -2043,9 +2043,6 @@ youtube.youtube.response = type=http-response, pattern=^https:\/\/youtubei\.goog
 youtube.youtube.request.init = type=http-request, pattern=^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&ack.*, script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js, requires-body=true, binary-body-mode=true, max-size=0, argument="{"captionLang":"{{{字幕翻译语言}}}"}"
 youtube.youtube.request.log_event = type=http-request, pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/log_event, script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js, requires-body=true, binary-body-mode=true, max-size=0
 
-# ------- X 网页版去广告 | X（推特网页版） -------
-xweb.X网页版去广告 = type=http-response, pattern=^https?:\/\/x\.com\/i\/api\/graphql\/[^\/]+\/(HomeTimeline|HomeLatestTimeline|TweetDetail), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/X/X_ads.js, requires-body=true
-
 # ------- 🆂🅿🅾🆃🅸🅵🆈 | Spotify -------
 # 可调参数: 歌词补全="true", 歌词翻译="true", 翻译语言="zh-CN", 百度翻译="false", 翻译账户="自行申请并填写", 翻译密钥="自行申请并填写"
 spotify.spotify-home = type=http-response,pattern=^https:\/\/(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?\/casita\/v1\/home\/default\/?(?:\?[^#]*)?$,requires-body=1,binary-body-mode=1,max-size=2097152,script-path=https://raw.githubusercontent.com/LOWERTOP/Shadowrocket-First/main/JS/Spotify.js,timeout=5
@@ -2088,4 +2085,4 @@ ghlimit.GitHub = type=http-request, script-path=https://lowertop.github.io/Shado
 {{{系统升级加速}}}.g.aaplimg.com = {{{升级加速地址}}}
 
 [MITM]
-hostname = %APPEND% static-tw.baozimh.com,*.baozimhcn.com,*.dzmanga.com,*.xiaoyi.com,api.pinterest.com,m.ctrip.com,capi.lkcoffee.com,ecapi.lkcoffee.com,img0*.luckincoffeecdn.com,sgi.teld.cn,sgi.teld.cc,api.qing2000.com,api.qing2000.net,api.qing2000.cc,api.qing2000.cn,223.5.5.5,ai.amap.com,info.amap.com,m5-zb.amap.com,m5.amap.com,oss.amap.com,sns.amap.com,starplucker.cyapi.cn,wrapper.cyapi.cn,oneapp-api.faw-vw.com,common.diditaxi.com.cn,freight.xiaojukeji.com,daijia.kuaidadi.com,162.14.157.*,ct.xiaojukeji.com,res.xiaojukeji.com,conf.diditaxi.com.cn,api.udache.com,123.207.209.*,112.53.55.225,120.241.142.*,120.241.143.*,116.85.*,139.199.240.84,ci.xiaohongshu.com,edith.xiaohongshu.com,live-go.xiaohongshu.com,live-mall.xiaohongshu.com,live-room.xiaohongshu.com,rec.xiaohongshu.com,referee.xiaohongshu.com,search.xiaohongshu.com,so.xiaohongshu.com,www.xiaohongshu.com,*.weibo.cn,*.weibo.com,weibo.com,api.weibo.cn,weibointl.api.weibo.cn,tiebac.baidu.com,gql.reddit.com,gql-fed.reddit.com,mag1.sdgun.net,*.googlevideo.com,youtubei.googleapis.com,x.com,spclient.wg.spotify.com,spclient.spotify.com,*spclient.spotify.com,*-spclient.wg.spotify.com,grpc.biliapi.net,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,www.bilibili.com,line3-h5-mobile-api.biligame.com,discord.com,discordapp.com,raw.githubusercontent.com,gist.githubusercontent.com,*.githubusercontent.com
+hostname = %APPEND% static-tw.baozimh.com,*.baozimhcn.com,*.dzmanga.com,*.xiaoyi.com,api.pinterest.com,m.ctrip.com,capi.lkcoffee.com,ecapi.lkcoffee.com,img0*.luckincoffeecdn.com,sgi.teld.cn,sgi.teld.cc,api.qing2000.com,api.qing2000.net,api.qing2000.cc,api.qing2000.cn,223.5.5.5,ai.amap.com,info.amap.com,m5-zb.amap.com,m5.amap.com,oss.amap.com,sns.amap.com,starplucker.cyapi.cn,wrapper.cyapi.cn,oneapp-api.faw-vw.com,common.diditaxi.com.cn,freight.xiaojukeji.com,daijia.kuaidadi.com,162.14.157.*,ct.xiaojukeji.com,res.xiaojukeji.com,conf.diditaxi.com.cn,api.udache.com,123.207.209.*,112.53.55.225,120.241.142.*,120.241.143.*,116.85.*,139.199.240.84,ci.xiaohongshu.com,edith.xiaohongshu.com,live-go.xiaohongshu.com,live-mall.xiaohongshu.com,live-room.xiaohongshu.com,rec.xiaohongshu.com,referee.xiaohongshu.com,search.xiaohongshu.com,so.xiaohongshu.com,www.xiaohongshu.com,*.weibo.cn,*.weibo.com,weibo.com,api.weibo.cn,weibointl.api.weibo.cn,tiebac.baidu.com,gql.reddit.com,gql-fed.reddit.com,mag1.sdgun.net,*.googlevideo.com,youtubei.googleapis.com,spclient.wg.spotify.com,spclient.spotify.com,*spclient.spotify.com,*-spclient.wg.spotify.com,grpc.biliapi.net,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,www.bilibili.com,line3-h5-mobile-api.biligame.com,discord.com,discordapp.com,raw.githubusercontent.com,gist.githubusercontent.com,*.githubusercontent.com
