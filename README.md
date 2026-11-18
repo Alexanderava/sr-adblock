@@ -43,18 +43,18 @@ https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock.sgmodule
 | Reddit | 推广帖 · 详情页广告 · NSFW 提示 · 自动翻译 |
 | SDGun 社区 | 开屏广告 · 轮播广告 |
 | Pinterest | 首页推广帖 · 相关推荐推广帖 |
-| Talkatone | AdMob / InMobi / Criteo / Smaato / AppLovin / Amazon 广告系统 |
 | Discord | 历史消息自动翻译（Google 翻译）· 双语对照 · 可调条目数与目标语言 · 阻断 UDP 443 |
 | GitHub 限制解除 | 解除 zh-CN 语言限制 · 缓解 429 Too Many Requests |
 | 苹果助手 | App Store 下载走金山 CDN · 系统升级走 cdn-apple · 可换网宿 / 阿里 CDN |
-| AWAvenue 秋风广告规则 | 998 条精确域名级广告封锁，覆盖各家 App 内置广告 SDK、统计与归因域名 |
 | AntiAD 通用兜底 | 淘宝 · 贴吧 · 微博 · 微信公众号 · 字节穿山甲 · 腾讯广点通 · 友盟 · 快手 · Viber · 各类广告联盟与统计上报 |
 
 ## 规模
 
-26 个模块 + 2 套通用规则集 · 1393 条规则 · 60 条 URL Rewrite · 27 条 Map Local · 137 条 jq · 39 个脚本 · 73 个 MITM 域名 · 45 个可调参数 · 4 条 Host 映射 · 约 168 KB。
+24 个模块 + 1 套通用规则集 · 353 条规则 · 60 条 URL Rewrite · 27 条 Map Local · 137 条 jq · 39 个脚本 · 73 个 MITM 域名 · 43 个可调参数 · 4 条 Host 映射 · 约 101 KB。
 
-规则顺序：具体 App 模块 → AWAvenue 通用规则（998 条）→ AntiAD 自用规则（兜底）。首条匹配生效，所以前面模块的 DIRECT 白名单不会被后面的通用 REJECT 覆盖。
+规则顺序：具体 App 模块 → AntiAD 通用规则（兜底）。首条匹配生效，前面模块的 DIRECT 白名单不会被后面的 REJECT 覆盖。
+
+**本模块只做拦截与增强，不改变流量走向**：已剔除所有 `PROXY` 策略规则和强制 `DIRECT` 的海外 IP 段，剩下的 DIRECT 只有苹果商店、一汽大众、抖音图片地址三条。
 
 ## 生效前提
 
@@ -62,7 +62,7 @@ https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock.sgmodule
 2. 开启 **HTTPS 解密** 并信任证书，否则 jq / 脚本类模块无效
 3. 部分 App 需清缓存或重装（微博、小红书、贴吧尤其明显）
 4. **哔哩哔哩额外要求**：Shadowrocket ≥ 2.2.81(3096)，并在设置里开启 **HTTP/2 MITM**；低版本请删除哔哩哔哩对应的段落（搜 `哔哩哔哩增强`），或在 `[MITM]` 里排除解密 `-grpc.biliapi.net`
-5. **AWAvenue 覆盖面广**：998 条精确域名封锁，个别 App 可能出现图片不加载或登录异常 —— 搜 `AWAvenue` 删掉整段再试
+5. **国外网站连不上排查**：多半不是模块拦的，而是「配置」模式下配置末尾是 `FINAL,DIRECT` —— 没被规则命中的流量全走直连。换一个自带分流 + `FINAL,PROXY` 的配置，或在自己配置的 `[Rule]` 末尾加 `FINAL,你的策略组名`
 
 ## 自定义
 
