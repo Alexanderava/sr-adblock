@@ -52,7 +52,21 @@ https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock.sgmodule
 
 ## 规模
 
-26 个模块 + 1 套通用规则集 · 2965 条规则 · 1402 条 URL Rewrite · 27 条 Map Local · 169 条 jq · 258 个脚本 · 1020 个 MITM 域名 · 43 个可调参数 · 4 条 Host 映射 · 约 376 KB。
+26 个模块 · 3015 条生效规则（354 条内嵌 + 2661 条远程规则集）· 1402 条 URL Rewrite · 27 条 Map Local · 169 条 jq · 258 个脚本 · 1020 个 MITM 域名 · 43 个可调参数 · 4 条 Host 映射 · 约 279 KB。
+
+## 域名规则自动更新
+
+奶思那份 2661 条域名黑名单不写在模块里，而是走**远程规则集**：
+
+```
+RULE-SET,https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/rules/naisi.list,REJECT
+```
+
+- 规则集在 `rules/naisi.list`，由 `.github/workflows/sync-rules.yml` **每周一自动**从 `fmz200/wool_scripts` 重新提取
+- 厂家换广告域名 → 奶思更新源文件 → 这里自动同步 → 你下次联网自动生效，**不用重装模块**
+- 想立刻同步：仓库 Actions 页手动跑一次 `Sync rule set`
+
+没做远程化的部分（URL 重写、jq、脚本）因为语法和逻辑绑在模块里，只能跟模块版本走。
 
 规则顺序：具体 App 模块 → AntiAD 通用规则（兜底）。首条匹配生效，前面模块的 DIRECT 白名单不会被后面的 REJECT 覆盖。
 
