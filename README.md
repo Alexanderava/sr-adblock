@@ -46,27 +46,25 @@ https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock.sgmodule
 | Discord | 历史消息自动翻译（Google 翻译）· 双语对照 · 可调条目数与目标语言 · 阻断 UDP 443 |
 | GitHub 限制解除 | 解除 zh-CN 语言限制 · 缓解 429 Too Many Requests |
 | 苹果助手 | App Store 下载走金山 CDN · 系统升级走 cdn-apple · 可换网宿 / 阿里 CDN |
+| 奶思 730 App 拦截合集 | QX 重写合集转制：2661 条域名拦截 · 1342 条 URL 重写 · 215 个脚本 · 32 条 jq，覆盖约 730 个 App |
+| Script Hub | QX / Surge / Loon / sgmodule 的脚本、重写、规则集格式互转，装完在 Safari 打开 `script.hub` |
 | AntiAD 通用兜底 | 淘宝 · 贴吧 · 微博 · 微信公众号 · 字节穿山甲 · 腾讯广点通 · 友盟 · 快手 · Viber · 各类广告联盟与统计上报 |
 
 ## 规模
 
-24 个模块 + 1 套通用规则集 · 353 条规则 · 60 条 URL Rewrite · 27 条 Map Local · 137 条 jq · 39 个脚本 · 73 个 MITM 域名 · 43 个可调参数 · 4 条 Host 映射 · 约 101 KB。
+26 个模块 + 1 套通用规则集 · 2965 条规则 · 1402 条 URL Rewrite · 27 条 Map Local · 169 条 jq · 258 个脚本 · 1020 个 MITM 域名 · 43 个可调参数 · 4 条 Host 映射 · 约 376 KB。
 
 规则顺序：具体 App 模块 → AntiAD 通用规则（兜底）。首条匹配生效，前面模块的 DIRECT 白名单不会被后面的 REJECT 覆盖。
 
 **本模块只做拦截与增强，不改变流量走向**：已剔除所有 `PROXY` 策略规则和强制 `DIRECT` 的海外 IP 段，剩下的 DIRECT 只有苹果商店、一汽大众、抖音图片地址三条。
 
-## 附加模块（可选）
+## 关于「730 App 扩展包」
 
-`AdBlock-Extra.sgmodule` —— 奶思（fmz200）QX 重写合集转制，独立模块，**不进主文件**。
+奶思（fmz200）QX 重写合集已**并入主模块**（`AdBlock.sgmodule` 里的「奶思 730 App 拦截合集」段落）。
 
-- 规模：2661 条域名拦截 · 1342 条 URL 重写 · 215 个脚本 · 32 条 jq · 968 个 MITM 域名 · 约 276 KB
-- 来源：`fmz200/wool_scripts/QuantumultX/rewrite/rewrite.snippet`
-- 安装：<https://alexanderava.github.io/sr-adblock/> 页面的「单独安装扩展包」
-- 转换对照：`host-suffix/host/host-keyword` → `DOMAIN-SUFFIX/DOMAIN/DOMAIN-KEYWORD`；`url reject*` → `- reject*`；`url script-*-body` → `[Script]`；`url jsonjq-response-body` → `http-response-jq`
-- 未转换：`response-body` 28 条、`echo-response` 2 条（QX 专有语法）
+仓库里保留的 `AdBlock-Extra.sgmodule` 是并入前的独立版本，**仅作备份，不要和主模块同时安装**，否则 2661 条规则会重复处理两遍。
 
-⚠️ 覆盖约 730 个 App，968 个解密域名 —— 证书没信任的话这些 App 会大面积报错。建议主模块稳定后再单独装。
+转换对照：`host-suffix/host/host-keyword` → `DOMAIN-SUFFIX/DOMAIN/DOMAIN-KEYWORD`；`url reject*` → `- reject*`；`url script-*-body` → `[Script]`；`url jsonjq-response-body` → `http-response-jq`。未转换 `response-body` 28 条、`echo-response` 2 条（QX 专有语法）。
 
 ## 生效前提
 
