@@ -76,6 +76,12 @@
     transition:transform .16s ease;
   }
   .install:active{transform:scale(.985)}
+  .install.sub{
+    margin:12px 0 0; padding:12px; font-size:14px; border-radius:14px;
+    color:var(--accent); background:color-mix(in srgb, var(--accent) 11%, transparent);
+    border:1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+    box-shadow:none;
+  }
   .hint{text-align:center; font-size:12px; color:var(--sub); margin:0 0 4px}
   .row{display:flex; gap:10px; margin-top:14px}
   .ghost{
@@ -146,6 +152,14 @@
     <div class="row">
       <a class="ghost" id="copy" href="#">复制模块地址</a>
       <a class="ghost" href="https://github.com/Alexanderava/sr-adblock" target="_blank" rel="noopener">查看仓库</a>
+    </div>
+
+    <h2>附加模块 <small>可选，另装一个</small></h2>
+    <div class="app">
+      <b>广告拦截扩展 · 730 App <em>独立模块</em></b>
+      <p>奶思 QX 重写合集转制<i>·</i>2661 条域名拦截<i>·</i>1342 条 URL 重写<i>·</i>215 个脚本<i>·</i>968 个解密域名<br>
+      覆盖 ~730 个 App / 小程序，规则偏激进 —— 建议主模块跑稳之后再装，出问题好定位</p>
+      <a class="install sub" href="shadowrocket://install?module=https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock-Extra.sgmodule">单独安装扩展包</a>
     </div>
 
     <h2>去掉了什么 / 增强了什么 <small>共 28 个 App / 服务</small></h2>
