@@ -56,6 +56,18 @@ https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock.sgmodule
 
 **本模块只做拦截与增强，不改变流量走向**：已剔除所有 `PROXY` 策略规则和强制 `DIRECT` 的海外 IP 段，剩下的 DIRECT 只有苹果商店、一汽大众、抖音图片地址三条。
 
+## 附加模块（可选）
+
+`AdBlock-Extra.sgmodule` —— 奶思（fmz200）QX 重写合集转制，独立模块，**不进主文件**。
+
+- 规模：2661 条域名拦截 · 1342 条 URL 重写 · 215 个脚本 · 32 条 jq · 968 个 MITM 域名 · 约 276 KB
+- 来源：`fmz200/wool_scripts/QuantumultX/rewrite/rewrite.snippet`
+- 安装：<https://alexanderava.github.io/sr-adblock/> 页面的「单独安装扩展包」
+- 转换对照：`host-suffix/host/host-keyword` → `DOMAIN-SUFFIX/DOMAIN/DOMAIN-KEYWORD`；`url reject*` → `- reject*`；`url script-*-body` → `[Script]`；`url jsonjq-response-body` → `http-response-jq`
+- 未转换：`response-body` 28 条、`echo-response` 2 条（QX 专有语法）
+
+⚠️ 覆盖约 730 个 App，968 个解密域名 —— 证书没信任的话这些 App 会大面积报错。建议主模块稳定后再单独装。
+
 ## 生效前提
 
 1. 全局路由设为 **「配置」** 模式
