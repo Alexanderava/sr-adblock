@@ -41,7 +41,6 @@ https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock.sgmodule
 | YouTube | 视频广告 · 首页与搜索推广 · Shorts/上传/选段按钮（可关）· 画中画 · YouTube Music 广告 |
 | Spotify | 首页广告 · 播放页广告 · 会员配置解锁 · 歌词补全与翻译 |
 | Reddit | 推广帖 · 详情页广告 · NSFW 提示 · 自动翻译 |
-| X（推特网页版） | 时间线推广帖 · 详情页推广 |
 | SDGun 社区 | 开屏广告 · 轮播广告 |
 | Pinterest | 首页推广帖 · 相关推荐推广帖 |
 | Talkatone | AdMob / InMobi / Criteo / Smaato / AppLovin / Amazon 广告系统 |
@@ -55,7 +54,7 @@ https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock.sgmodule
 
 ## 规模
 
-29 个模块 + 2 套通用规则集 · 1394 条规则 · 62 条 URL Rewrite · 27 条 Map Local · 137 条 jq · 40 个脚本 · 76 个 MITM 域名 · 59 个可调参数 · 4 条 Host 映射 · 约 171 KB。
+28 个模块 + 2 套通用规则集 · 1394 条规则 · 62 条 URL Rewrite · 27 条 Map Local · 137 条 jq · 39 个脚本 · 75 个 MITM 域名 · 59 个可调参数 · 4 条 Host 映射 · 约 171 KB。
 
 规则顺序：具体 App 模块 → AWAvenue 通用规则（998 条）→ AntiAD 自用规则（兜底）。首条匹配生效，所以前面模块的 DIRECT 白名单不会被后面的通用 REJECT 覆盖。
 
