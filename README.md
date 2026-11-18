@@ -45,8 +45,6 @@ https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock.sgmodule
 | Pinterest | 首页推广帖 · 相关推荐推广帖 |
 | Talkatone | AdMob / InMobi / Criteo / Smaato / AppLovin / Amazon 广告系统 |
 | Discord | 历史消息自动翻译（Google 翻译）· 双语对照 · 可调条目数与目标语言 · 阻断 UDP 443 |
-| GitHub 资源加速 | RAW 资源 302 到 jsDelivr CDN · 可选 cdn / fastly / gcore 节点 |
-| GitHub 私库访问 | 按用户名自动注入 PAT Token · 支持 4 个账号 · 私密仓库 raw / gist · 默认未启用 |
 | GitHub 限制解除 | 解除 zh-CN 语言限制 · 缓解 429 Too Many Requests |
 | 苹果助手 | App Store 下载走金山 CDN · 系统升级走 cdn-apple · 可换网宿 / 阿里 CDN |
 | AWAvenue 秋风广告规则 | 998 条精确域名级广告封锁，覆盖各家 App 内置广告 SDK、统计与归因域名 |
@@ -54,7 +52,7 @@ https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock.sgmodule
 
 ## 规模
 
-28 个模块 + 2 套通用规则集 · 1394 条规则 · 62 条 URL Rewrite · 27 条 Map Local · 137 条 jq · 39 个脚本 · 75 个 MITM 域名 · 59 个可调参数 · 4 条 Host 映射 · 约 171 KB。
+26 个模块 + 2 套通用规则集 · 1393 条规则 · 60 条 URL Rewrite · 27 条 Map Local · 137 条 jq · 39 个脚本 · 73 个 MITM 域名 · 45 个可调参数 · 4 条 Host 映射 · 约 168 KB。
 
 规则顺序：具体 App 模块 → AWAvenue 通用规则（998 条）→ AntiAD 自用规则（兜底）。首条匹配生效，所以前面模块的 DIRECT 白名单不会被后面的通用 REJECT 覆盖。
 
@@ -64,8 +62,7 @@ https://raw.githubusercontent.com/Alexanderava/sr-adblock/main/AdBlock.sgmodule
 2. 开启 **HTTPS 解密** 并信任证书，否则 jq / 脚本类模块无效
 3. 部分 App 需清缓存或重装（微博、小红书、贴吧尤其明显）
 4. **哔哩哔哩额外要求**：Shadowrocket ≥ 2.2.81(3096)，并在设置里开启 **HTTP/2 MITM**；低版本请删除哔哩哔哩对应的段落（搜 `哔哩哔哩增强`），或在 `[MITM]` 里排除解密 `-grpc.biliapi.net`
-5. **GitHub 加速与私库互斥**：加速模块会把 RAW 请求 302 到 jsDelivr，导致私库的 Token 注入失效。用私库请删掉「GitHub 资源加速」那两行 URL Rewrite；用加速则保持默认、不开私库开关
-6. **AWAvenue 覆盖面广**：998 条精确域名封锁，个别 App 可能出现图片不加载或登录异常 —— 搜 `AWAvenue` 删掉整段再试
+5. **AWAvenue 覆盖面广**：998 条精确域名封锁，个别 App 可能出现图片不加载或登录异常 —— 搜 `AWAvenue` 删掉整段再试
 
 ## 自定义
 
